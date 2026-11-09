@@ -1,56 +1,39 @@
-# WebSentry — Uptime Monitoring Platform (MySQL)
+# WebSentry — Website Monitoring Platform
 
-A starter full-stack project using React, Vite, Tailwind CSS, Node.js, Express and MySQL.
+WebSentry is a full-stack website monitoring application that tracks website uptime and availability.
 
-## Requirements
-- Node.js 18+
-- MySQL 8+
-- npm
+## Features
+- User registration and login
+- Monitor website uptime
+- Automatic website checks every 60 seconds
+- Website status dashboard
+- AI-powered monitoring analysis
 
-## 1. Database
-Open MySQL Workbench and run `database/schema.sql`.
+## Tech Stack
+- React, Vite, Tailwind CSS
+- Node.js, Express
+- MySQL
+- JWT Authentication
 
-## 2. Backend
+## Getting Started
+
+### Backend
 ```bash
 cd backend
 npm install
-```
-Copy `.env.example` to `.env` and fill in your MySQL details and JWT secret.
-```bash
 npm run dev
 ```
-The API runs at `http://localhost:5000`. The monitor worker checks active monitors every 60 seconds.
 
-## 3. Frontend
-In another terminal:
+### Frontend
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
-Open the Vite URL shown in the terminal (usually `http://localhost:5173`).
 
-## 4. Try it
-1. Register an account.
-2. Log in.
-3. Add a website such as `https://example.com`.
-4. Wait up to 60 seconds for the first automatic check.
+Configure your environment variables and MySQL database before running the application.
 
-## API routes
-- `POST /api/auth/register`
-- `POST /api/auth/login`
-- `GET /api/monitors` (JWT)
-- `POST /api/monitors` (JWT)
-- `DELETE /api/monitors/:id` (JWT)
-- `GET /api/monitors/:id/pings` (JWT)
-- `GET /api/public/status/:userId`
-- `POST /api/ai/analyze/:monitorId` (JWT; requires Gemini key)
-
-## Rename compatibility note
-- The application branding is now WebSentry. The existing MySQL database name (`sentinel_db`) and browser storage keys are intentionally retained so an existing installation and saved login session continue to work without a database migration.
-
-## Important notes
-- This is a learning/MVP project, not a hardened production monitoring service.
-- Before deploying publicly, add strict SSRF protection (including DNS/IP validation and redirect checks), rate limiting, email verification, password reset, request logging, and stronger operational monitoring.
-- Keep `.env` private. Never commit API keys or database passwords.
-- For deployment, provision a managed MySQL database and configure environment variables on the backend host. The frontend's `VITE_API_URL` must point to the deployed API.
+## Usage
+1. Create an account and log in.
+2. Add a website to monitor.
+3. View its uptime and status.
