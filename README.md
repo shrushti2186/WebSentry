@@ -37,3 +37,10 @@ Configure your environment variables and MySQL database before running the appli
 1. Create an account and log in.
 2. Add a website to monitor.
 3. View its uptime and status.
+
+
+<img width="1082" height="832" alt="image" src="https://github.com/user-attachments/assets/18950c84-f1aa-4e23-b5af-bd5ae2d9ccd6" />
+
+
+<img width="1873" height="896" alt="image" src="https://github.com/user-attachments/assets/0f56284d-a9bf-48bf-a023-e17b9738baac" />
+
